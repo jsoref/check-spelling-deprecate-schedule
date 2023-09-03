@@ -22,6 +22,7 @@ jobs:
       - uses: jsoref/check-spelling@prerelease
         with:
           debug: 1
+          checkout: true
           bucket: .github/actions
           project: spelling
           event_aliases: '{"workflow_dispatch":"schedule"}'
