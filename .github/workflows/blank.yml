@@ -7,6 +7,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   schedule:
   - cron: "*/5 * * * *"
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -23,5 +24,6 @@ jobs:
           debug: 1
           bucket: .github/actions
           project: spelling
+          event_aliases: '{"workflow_dispatch":"schedule"}'
         env:
-          timeframe: 60
+          timeframe: 600
