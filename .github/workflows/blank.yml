@@ -21,5 +21,7 @@ jobs:
       - uses: jsoref/check-spelling@prerelease
         with:
           debug: 1
+          bucket: .github/actions
+          project: spelling
         env:
           timeframe: 60
